@@ -1,18 +1,7 @@
 # run on container environment
 sudo: false
 
-language: php
-
-notifications:
-    email:
-        on_success: change
-        on_failure: always
-
-php: 7.0
-
 before_script:
     - cd ../../
     - git clone https://github.com/johnbillion/extended-cpts.git
     - ls
-
-script:
