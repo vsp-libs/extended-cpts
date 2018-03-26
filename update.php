@@ -9,8 +9,10 @@ echo shell_exec("cd ../../");
 echo shell_exec("git clone https://github.com/johnbillion/extended-cpts.git");
 echo shell_exec("cp extended-cpts/src/* ".$dir."/src/");
 echo shell_exec("cp extended-cpts/*.php ".$dir."/");
-echo shell_exec("ls");
+//echo shell_exec("rm -r extended-cpts/");
+unlink($dir.'extended-cpts/');
 echo shell_exec("cd ".$dir);
+echo shell_exec("ls");
 
 date_default_timezone_set( 'UTC' );
 $output = shell_exec( 'git log -1' );
