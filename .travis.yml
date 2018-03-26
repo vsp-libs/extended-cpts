@@ -6,6 +6,7 @@ language: php
 php: 7.2
     
 script:
+    - mkdir src
     - ls
     - cd ../../
     - git clone https://github.com/johnbillion/extended-cpts.git
