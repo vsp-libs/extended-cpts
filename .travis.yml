@@ -1,0 +1,24 @@
+# run on container environment
+sudo: false
+
+language: php
+
+notifications:
+    email:
+        on_success: change
+        on_failure: always
+
+php: 7.0
+
+env:
+    # latest:
+    - WP_VERSION=latest
+    # nightly:
+    - WP_VERSION=nightly
+
+before_script:
+    - cd ../../
+    - git clone https://github.com/johnbillion/extended-cpts.git
+    - cd ls
+
+script:
