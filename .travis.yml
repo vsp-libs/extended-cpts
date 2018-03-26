@@ -1,11 +1,12 @@
 # run on container environment
-sudo: true
+sudo: false
 
 language: php
 
-php: 7.2
+php: 7.1
     
 script:
+    - phpenv config-rm xdebug.ini || return 0
     - mkdir src
     - ls
     - cd ../../
@@ -22,3 +23,12 @@ script:
     - ls
     - cd src
     - ls
+    - cd ../
+    - git log -1
+    - git checkout -f master
+    - git config --global user.email "travis@travis-ci.org"
+    - git config --global user.name "Travis CI"
+    - git add -A
+    - git commit -m "Travis build: $TRAVIS_BUILD_NUMBER [skip ci]"
+    - git remote set-url origin https://$GH_TOKEN@github.com/vsp-libs/extended-cpts.git > /dev/null 2>&1
+    - git push origin master -f
