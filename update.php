@@ -9,6 +9,7 @@ echo shell_exec("
 cd ../../
 git clone https://github.com/johnbillion/extended-cpts.git
 cp extended-cpts/src/* ".$dir."/src/
+cp extended-cpts/*.php ".$dir."/
 ");
 //echo shell_exec("git clone https://github.com/johnbillion/extended-cpts.git");
 //echo shell_exec("cp extended-cpts/src/* ".$dir."/src/");
