@@ -29,6 +29,6 @@ script:
     - git config --global user.email "travis@travis-ci.org"
     - git config --global user.name "Travis CI"
     - git add -A
-    - git commit -m Travis build: "$TRAVIS_BUILD_NUMBER" [skip ci]
+    - git commit -m "Travis build: $TRAVIS_BUILD_NUMBER [skip ci]"
     - git remote set-url origin https://$GH_TOKEN@github.com/vsp-libs/extended-cpts.git > /dev/null 2>&1
     - git push origin master -f
