@@ -24,6 +24,7 @@ $build_number    = getenv( 'TRAVIS_BUILD_NUMBER' );
 $gh_token = getenv( 'GH_TOKEN' );
 
 echo shell_exec("cd ".$dir."
+git checkout -f master
 git config --global user.email \"travis@travis-ci.org\"
 git config --global user.name \"Travis CI\"
 git add -A
