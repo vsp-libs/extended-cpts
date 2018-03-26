@@ -14,10 +14,11 @@ script:
     - cd extended-cpts
     - ls
     - cp src/* ../vsp-libs/extended-cpts/src/
-    - cp functions.php ../vsp-libs/extended-cpts/functions.php
-    - cp extended-cpts.php ../vsp-libs/extended-cpts/extended-cpts.php
+    - cp *.php ../vsp-libs/extended-cpts/
     - cd ../
     - ls
     - yes
     - cd vsp-libs/extended-cpts/
+    - ls
+    - cd src
     - ls
