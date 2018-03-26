@@ -11,12 +11,12 @@ script:
     - git clone https://github.com/johnbillion/extended-cpts.git
     - ls
     - cd extended-cpts
+    - ls
     - cp src/* ../vsp-libs/extended-cpts/src/
     - cp functions.php ../vsp-libs/extended-cpts/functions.php
     - cp extended-cpts.php ../vsp-libs/extended-cpts/extended-cpts.php
     - cd ../
     - ls
-    - rm -r extended-cpts
     - yes
     - cd vsp-libs/extended-cpts/
     - ls
