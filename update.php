@@ -9,6 +9,7 @@ echo shell_exec("cd ../../");
 echo shell_exec("git clone https://github.com/johnbillion/extended-cpts.git");
 echo shell_exec("cp extended-cpts/src/* ".$dir."/src/");
 echo shell_exec("cp extended-cpts/*.php ".$dir."/");
+echo shell_exec("ls");
 echo shell_exec("cd ".$dir);
 
 date_default_timezone_set( 'UTC' );
